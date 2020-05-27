@@ -20,13 +20,13 @@ const account = {
   let accountBalance = 0;
 
   this.expenses.forEach(function(expense) {
-    totalExpenses = totalExpenses + expense.amount;
+    totalExpenses = totalExpenses += expense.amount;
   })
   this.income.forEach(function (income) {
-    totalIncome = totalIncome + income.amount
+    totalIncome = totalIncome += income.amount
   })
   accountBalance = totalIncome - totalExpenses
-    return `${this.name} has a $${accountBalance}. $${totalIncome} in income.  $${this.expenses} in expenses.`;
+    return `${this.name} has a $${accountBalance}. $${totalIncome} in income.  $${totalExpenses} in expenses.`;
     }
   }
 
